@@ -40,8 +40,7 @@ print(
 #str(object="Hi") # "Hi"
 
 # ───────────── Save Map to HTML inside folder 1 ─────────────
-from pathlib import Path
-azores.save(Path("1")/"azores_map.html")
+azores.save("azores_map.html")
 
 # ───────────── Object Behavior Summary ─────────────
 # - Integers can be added, subtracted, multiplied, divided
