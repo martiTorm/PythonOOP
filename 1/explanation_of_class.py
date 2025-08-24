@@ -11,6 +11,7 @@
 # A class is like a blueprint for creating objects. Imagine you want to make many points on a map.
 # Instead of writing code for each point, you make a "Point" class, and then you can create as many points as you want.
 """
+
 # What is 'self'?
 """
 # 'self' is a way for the class to refer to itself. When you create a point, 'self' means "this point".
@@ -25,6 +26,11 @@
 # Methods could be considered as functions that belong to the class.
 """
 
+# IMPORTANT to consider about classes:
+"""
+# According to one of the software design principles, a class should have only one responsibility. In other words, we should avoid writing classes that do a lot of work.
+"""
+
 # Example:
 """
 # p1 = Point(1, 2)
@@ -37,14 +43,15 @@ class Point:
     You can use it to create points on a map, check if a point is inside a rectangle,
     and calculate the distance between two points.
     """
-
+    
     def __init__(self, x, y):
         self.x = x  # Store the x coordinate for this point
         self.y = y  # Store the y coordinate for this point
 
     def falls_in_rectangle(self, lowerleft, upperright):
         # Check if this point is inside the rectangle defined by lowerleft and upperright corners
-        if lowerleft[0] < self.x < upperright[0] and lowerleft[1] < self.y < upperright[1]:
+        if lowerleft[0] < self.x < upperright[0] \
+            and lowerleft[1] < self.y < upperright[1]:
             return True
         else:
             return False
